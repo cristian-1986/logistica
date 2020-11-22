@@ -10,5 +10,12 @@ try {
     die('Conexión Falló: '.$e->getMessage());
 }
 
+class Database{
+    public static function connect(){
+        $db= new mysqli($server,$usarname,$password,$logistica);
+        $db->query("SET NAMES 'utf8'");
+        return $db;
+    }
+}
 
 ?>

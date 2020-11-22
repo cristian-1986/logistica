@@ -1,28 +1,27 @@
 
-<!--Barra lateral-->
+<!--Barra Menu-->
 <aside id="lateral">
+    
+    <?php
+    session_start();
+    require 'config/db.php';
+    if (isset($_SESSION['id_usuario'])) {
+        $records = $conn->prepare('SELECT id, nombre, email, password FROM usuarios WHERE id = :id');
+        $records->bindParam(':id', $_SESSION['id_usuario']);
+        $records->execute();
+        $results = $records->fetch(PDO::FETCH_ASSOC);
 
-    <div id="login" class="block_aside">
-        <h3>Entrar a la Web</h3>
-        <form action="#" method="post">
-            <label for="email">Email</label>
-            <input type="email" name="email"/>
+        $user = null;
 
-            <label for="password">Password</label>
-            <input type="password" name="password"/>  
-
-            <input type="submit" value="Enviar"/>
-        </form>
-
-        <ul>
-            <li><a href="#">Pedidos de clientes</a></li>
-            <li><a href="#">Gestionar repartos</a></li>
-            <li><a href="#">Gestionar stocks</a></li>
-        </ul>  
-    </div>
-
+        if (count($results) > 0) {
+            $user = $results;
+        }
+    }
+    ?>
+    
+    <h4>: <?= $user['nombre']; ?></h4> 
 </aside> 
+    
 
-<!--Contenido Central-->
-<div id="central">
+
 

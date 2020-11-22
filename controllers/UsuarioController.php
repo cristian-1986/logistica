@@ -1,8 +1,18 @@
 <?php
 
 class usuarioController{
-    public function index(){
-    echo "Controlador Usuario, Acción index";
+    
+    public function index(){        
+    //renderizar vista
+    require_once 'views/usuarios/usuarios.php';       
+    }
+    
+    public function registro(){
+    require_once 'views/usuarios/registro.php';
+    }
+    
+    public function saveUsuario(){
+        
     }
 }
 
