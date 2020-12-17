@@ -13,7 +13,12 @@ require 'config/db.php';
     }
 ?>
 
-        <?php require 'views/layout/header.php' ?>
+    <?php
+    require_once 'autoload.php';
+    require_once 'config/parametros.php';
+    require_once 'views/layout/header.php';
+    require_once 'views/layout/menu.php';
+    ?>
 
 
         <?php if (!empty($user)): ?> 

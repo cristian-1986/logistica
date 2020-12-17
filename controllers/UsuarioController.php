@@ -1,8 +1,13 @@
 <?php
+require_once 'models/usuario.php';
 
 class usuarioController{
     
-    public function index(){        
+    
+    public function index(){ 
+        
+    $usuario = new Usuario();
+    $usuarios = $usuario->getAll();
     //renderizar vista
     require_once 'views/usuarios/usuarios.php';       
     }

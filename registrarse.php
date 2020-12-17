@@ -23,19 +23,12 @@ if (!empty($_POST['nombre']) && !empty($_POST['email']) && !empty($_POST['passwo
 
 ?>
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Registrarse</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link href = "https://fonts.googleapis.com/css2? family = Roboto: wght @ 100 & display = swap" rel = "hoja de estilo">
-        <link href = "https://fonts.googleapis.com/css2? family = Roboto: wght @ 100 & display = swap" rel = "hoja de estilo">
-        <link rel="stylesheet" href="css/styles.css"
-    </head>
-    <body>
-
-        <?php require 'views/layout/header.php' ?>
+    <?php
+    require_once 'autoload.php';
+    require_once 'config/parametros.php';
+    require_once 'views/layout/header.php';
+    require_once 'views/layout/menu.php';
+    ?>  
 
         <?php if (!empty($message)): ?>
             <p><?= $message ?></p>

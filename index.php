@@ -1,5 +1,6 @@
 <?php
 require_once 'autoload.php';
+require_once 'config/db.php';
 require_once 'config/parametros.php';
 require_once 'views/layout/header.php';
 require_once 'views/layout/menu.php';

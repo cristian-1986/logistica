@@ -13,5 +13,5 @@
 
     <body>
         <header class="header">
-            <a href="/sistema-logistico">Sistema Logístico</a>
+            <a href="/sistema-logistico">Sistema de gestión del sector logístico</a>
         </header>

@@ -1,5 +1,4 @@
 
-
 <h1 align="center">Usuarios</h1>       
 <div class="container">
         <table class="table table-bodered table-hover">
@@ -10,22 +9,17 @@
                 </tr>
             </thead>
             <tbody>
+                
+                <?php while($ver = $usuarios->fetch_object()): ?>    
+                        
                 <tr>
-                    <td>Mauricio</td>
-                    <td>mauricio@gmail.com</td>
+                    <td><?=$ver->nombre; ?></td>
+                    <td><?=$ver->email; ?></td>
                 </tr>
-                <tr>
-                    <td>Matias</td>
-                    <td>matias@gmial.com</td>
-                </tr>
-                <tr>
-                    <td>Jorge</td>
-                    <td>jorge@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>Omar</td>
-                    <td>omar@gmail.com</td>
-                </tr>
+               
+                <?php endwhile; ?>
+                
+                
             </tbody>
         </table>
 </div>

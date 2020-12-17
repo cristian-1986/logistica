@@ -53,7 +53,7 @@
                         <!--menú con Compras-->
                         <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                            Compras
+                            Reposición
                         </a>
                             <div class="dropdown-menu">
                                 <a href="#" class="dropdown-item">Productos</a>
